@@ -1,0 +1,5 @@
+outs:
+- md5: bbd393c72041787d149a0471d7958501
+  size: 21300173
+  hash: md5
+  path: train_transformed.pkl
