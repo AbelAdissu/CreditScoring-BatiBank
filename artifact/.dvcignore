@@ -1,0 +1,3 @@
+# Ignore the original .pkl files from DVC, but allow DVC to track them
+/test_transformed.pkl
+/train_transformed.pkl
