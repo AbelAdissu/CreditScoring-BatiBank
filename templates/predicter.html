@@ -1,0 +1,56 @@
+<!-- predicter.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+</head>
+<body>
+    <h1>Prediction Page</h1>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('predicter') }}">Prediction</a>
+    </nav>
+    
+    <form method="post" action="{{ url_for('predicter') }}">
+        <label for="Outliers">Outliers:</label>
+        <input type="text" name="Outliers" id="Outliers" required><br>
+
+        <label for="PricingStrategy">Pricing Strategy:</label>
+        <input type="text" name="PricingStrategy" id="PricingStrategy" required><br>
+
+        <label for="ProductCategory_airtime">Product Category (Airtime):</label>
+        <input type="text" name="ProductCategory_airtime" id="ProductCategory_airtime" required><br>
+
+        <label for="ProductCategory_financial_services">Product Category (Financial Services):</label>
+        <input type="text" name="ProductCategory_financial_services" id="ProductCategory_financial_services" required><br>
+
+        <label for="Value">Value:</label>
+        <input type="text" name="Value" id="Value" required><br>
+
+        <label for="Amount">Amount:</label>
+        <input type="text" name="Amount" id="Amount" required><br>
+
+        <label for="ChannelID">Channel ID:</label>
+        <input type="text" name="ChannelID" id="ChannelID" required><br>
+
+        <label for="SubscriptionId">Subscription ID:</label>
+        <input type="text" name="SubscriptionId" id="SubscriptionId" required><br>
+
+        <label for="AccountId">Account ID:</label>
+        <input type="text" name="AccountId" id="AccountId" required><br>
+
+        <label for="ProviderId">Provider ID:</label>
+        <input type="text" name="ProviderId" id="ProviderId" required><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <h2>Prediction: {{ prediction[0] }}</h2>
+    {% elif error %}
+        <h2>{{ error }}</h2>
+    {% endif %}
+</body>
+</html>
