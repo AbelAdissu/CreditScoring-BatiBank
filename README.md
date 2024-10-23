@@ -5,7 +5,7 @@ In this section, we analyze the feature importance of our trained XGBoost model 
 ## Feature Importance Plot
 The following plot illustrates the importance of each feature in the model. Features are ranked by their **F-score**, which measures how frequently each feature is used to split the data across all trees in the model.
 
-![Feature Importance Plot](Images\model_interpretaion_image.png)
+![Feature Importance Plot](Images/model_interpretaion_image.png)
 
 ### Observations
 1. **Most Important Feature**:
